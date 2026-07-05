@@ -194,33 +194,7 @@ Modify `public/style.css` to customize:
 - **Frontend not loading**: Ensure `public` folder is in the root directory
 - **Port already in use**: Change the `PORT` in `.env` or kill the process using the current port
 
-## 📝 License
-
-ISC License - Feel free to use this project for personal or commercial purposes.
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- Report bugs
-- Suggest new features
-- Improve documentation
-- Add new personas
-
-## 📧 Contact & Support
-
 For questions or support, reach out through:
 
 - GitHub Issues: [Persona Repository](https://github.com/janhvi1508/Persona)
 - Project Website: [https://personai.janhvidev.in/](https://personai.janhvidev.in/)
-
-## 🙏 Acknowledgments
-
-- Powered by [OpenAI](https://openai.com/)
-- Built with [Express.js](https://expressjs.com/)
-- Icons by [Lucide](https://lucide.dev/)
-- Fonts by [Google Fonts](https://fonts.google.com/)
-
----
-
-**Made with ❤️ by the Persona AI Team**
