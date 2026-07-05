@@ -1,0 +1,5 @@
+# Ignore the environment variables file (Protects the API keys)
+.env
+
+# Ignore the Node modules folder (Too large, can be re-installed via npm install)
+node_modules/

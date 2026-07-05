@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona AI - Interactive Chat Arena</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-area">
+          <div class="logo-icon">
+            <img src="logo-light.jpg" alt="Logo Light" class="logo-img logo-light">
+            <img src="logo-dark.jpg" alt="Logo Dark" class="logo-img logo-dark">
+          </div>
+          <span class="logo-text">Persona<span class="accent-text">AI</span></span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close sidebar">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-section-title">Active Personas</div>
+      
+      <div class="character-list">
+        <!-- Hitesh Card -->
+        <div class="character-card active" id="char-hitesh" data-char="hitesh">
+          <div class="avatar-container">
+            <div class="avatar hitesh-avatar"><img src="hitesh.jpg" alt="Hitesh Sir"></div>
+            <div class="status-indicator online"></div>
+          </div>
+          <div class="char-info">
+            <div class="char-name">Hitesh Sir</div>
+          </div>
+        </div>
+
+        <!-- Piyush Card -->
+        <div class="character-card" id="char-piyush" data-char="piyush">
+          <div class="avatar-container">
+            <div class="avatar piyush-avatar"><img src="piyush.jpg" alt="Piyush Sir"></div>
+            <div class="status-indicator online"></div>
+          </div>
+          <div class="char-info">
+            <div class="char-name">Piyush Sir</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="theme-toggle-container">
+          <span class="theme-label">Theme Mode</span>
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+            <span class="toggle-slider"></span>
+          </button>
+        </div>
+        <div class="creator-badge">
+          <span>Powered by ChaiCode</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Chat Container -->
+    <main class="chat-container">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <button class="menu-btn" id="sidebarToggle" aria-label="Open sidebar">
+          <i data-lucide="menu"></i>
+        </button>
+        
+        <div class="active-char-profile">
+          <div class="avatar active-header-avatar" id="headerAvatar"><img src="hitesh.jpg" alt="Hitesh Sir"></div>
+          <div class="active-char-meta">
+            <h1 class="active-char-name" id="headerName">Hitesh Sir</h1>
+            <p class="active-char-status" id="headerStatus"><a href="https://hitesh.ai/" target="_blank" class="header-status-link">hitesh.ai</a></p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="action-btn" id="clearChatBtn" title="Clear chat history">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Chat Messages Area -->
+      <section class="chat-messages" id="chatMessages">
+        <!-- Initial Welcome Message -->
+        <div class="system-message">
+          <div class="system-avatar orange-glow">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <div class="system-content">
+            <h3>Welcome to Persona AI</h3>
+            <p>Select a persona from the sidebar and start a conversion. Watch the step-by-step pipeline reveal the AI's thoughts, analysis, and final reasoning.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator-container hidden" id="typingIndicator">
+        <div class="typing-indicator-bubble">
+          <div class="typing-status-text" id="typingStatus">Thinking...</div>
+          <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <footer class="chat-input-container">
+        <form class="chat-form" id="chatForm">
+          <textarea 
+            id="userInput" 
+            placeholder="Ask something about tech, system design, or careers..." 
+            rows="1" 
+            required
+          ></textarea>
+          <button type="submit" class="send-btn" id="sendBtn" aria-label="Send message">
+            <i data-lucide="send"></i>
+          </button>
+        </form>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Initialize Lucide icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Custom Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
